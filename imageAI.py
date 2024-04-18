@@ -1,5 +1,5 @@
 from openai import OpenAI
-client = OpenAI()
+client = OpenAI(organization='org-YNjZfF913KkU0VePJ1fTrJf0',)
 
 response = client.images.generate(
   model="dall-e-3",
@@ -8,5 +8,4 @@ response = client.images.generate(
   quality="standard",
   n=1,
 )
-
 image_url = response.data[0].url
